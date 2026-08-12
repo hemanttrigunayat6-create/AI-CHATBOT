@@ -267,7 +267,8 @@ catch (error) {
 
 
 
+const PORT = process.env.PORT || 3000;
 
-app.listen(3000, () => {
-    console.log("Server Running On Port 3000");
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server Running On Port ${PORT}`);
 });
