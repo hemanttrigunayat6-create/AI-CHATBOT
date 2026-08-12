@@ -269,6 +269,12 @@ catch (error) {
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, "0.0.0.0", () => {
+app.get("/", (req, res) => {
+    res.sendFile(
+        path.join(__dirname, "../Frontend/login.html")
+    );
+});
+
+app.listen(PORT, () => {
     console.log(`Server Running On Port ${PORT}`);
 });
